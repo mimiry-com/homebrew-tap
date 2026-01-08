@@ -5,21 +5,21 @@
 class Mimiry < Formula
   desc "Mimiry CLI - Command-line interface for the Mimiry platform"
   homepage "https://github.com/mimiry-com/mimiry-releases"
-  version "1.0.0"
+  version "1.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mimiry-com/mimiry-releases/releases/download/v1.0.0/mimiry_darwin_amd64.tar.gz"
-      sha256 "01209392e6f467780c13786370e3f36f2faeb8a10c7874a1166c38529ab0bd6c"
+      url "https://github.com/mimiry-com/mimiry-releases/releases/download/v1.0.2/mimiry_darwin_amd64.tar.gz"
+      sha256 "cf9ac9c19788af192056424ecee012babccdbfd822318b4c00482b0f936fac7c"
 
       def install
         bin.install "mimiry"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mimiry-com/mimiry-releases/releases/download/v1.0.0/mimiry_darwin_arm64.tar.gz"
-      sha256 "8175fbcce13ea9f0a9e07aa26a06c01d3aca2f49f7702ed3ed24115105782c9b"
+      url "https://github.com/mimiry-com/mimiry-releases/releases/download/v1.0.2/mimiry_darwin_arm64.tar.gz"
+      sha256 "fe93cbfc0f4f278072766855644eea38867d0cefa97982ec3b643f61c124bf13"
 
       def install
         bin.install "mimiry"
@@ -29,15 +29,15 @@ class Mimiry < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mimiry-com/mimiry-releases/releases/download/v1.0.0/mimiry_linux_amd64.tar.gz"
-      sha256 "17477984b3644161c2e5de2d62fa5be7ffdba0acf5bcd15ca71c6757f24eb619"
+      url "https://github.com/mimiry-com/mimiry-releases/releases/download/v1.0.2/mimiry_linux_amd64.tar.gz"
+      sha256 "53a1db5e8221fec82725e1ff8636b50047d97501bf8d5456006eb0700ecba75c"
       def install
         bin.install "mimiry"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mimiry-com/mimiry-releases/releases/download/v1.0.0/mimiry_linux_arm64.tar.gz"
-      sha256 "9ecef2fd7f106caa2f34b8c8173f82da9abbe9b545ae51c1c2bac3dd392df424"
+      url "https://github.com/mimiry-com/mimiry-releases/releases/download/v1.0.2/mimiry_linux_arm64.tar.gz"
+      sha256 "124b901540268a5565db8296c427e8bb3cdb8993bf54f138b6c16cc6e7b04dd0"
       def install
         bin.install "mimiry"
       end
