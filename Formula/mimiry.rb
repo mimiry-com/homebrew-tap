@@ -5,23 +5,23 @@
 class Mimiry < Formula
   desc "Mimiry CLI - Command-line interface for the Mimiry platform"
   homepage "https://github.com/mimiry-com/mimiry-releases"
-  version "1.0.2"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mimiry-com/mimiry-releases/releases/download/v1.0.2/mimiry_darwin_amd64.tar.gz"
-      sha256 "cf9ac9c19788af192056424ecee012babccdbfd822318b4c00482b0f936fac7c"
+      url "https://github.com/mimiry-com/mimiry-releases/releases/download/v1.1.0/mimiry_darwin_amd64.tar.gz"
+      sha256 "f9b0d1d03e68a029feadeafcc81652ad468ed7bd6fa99e7f05181b3b5c4aef5d"
 
-      def install
+      define_method(:install) do
         bin.install "mimiry"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mimiry-com/mimiry-releases/releases/download/v1.0.2/mimiry_darwin_arm64.tar.gz"
-      sha256 "fe93cbfc0f4f278072766855644eea38867d0cefa97982ec3b643f61c124bf13"
+      url "https://github.com/mimiry-com/mimiry-releases/releases/download/v1.1.0/mimiry_darwin_arm64.tar.gz"
+      sha256 "c88285fd3854832ab76dc50f39eb4779f8c15fbadc9b35acb621ef3fc04a66db"
 
-      def install
+      define_method(:install) do
         bin.install "mimiry"
       end
     end
@@ -29,16 +29,16 @@ class Mimiry < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mimiry-com/mimiry-releases/releases/download/v1.0.2/mimiry_linux_amd64.tar.gz"
-      sha256 "53a1db5e8221fec82725e1ff8636b50047d97501bf8d5456006eb0700ecba75c"
-      def install
+      url "https://github.com/mimiry-com/mimiry-releases/releases/download/v1.1.0/mimiry_linux_amd64.tar.gz"
+      sha256 "3062e9f233d3ebb54bded97bee1ccaf5dd97f5399e841a2ede294c3f9abbe659"
+      define_method(:install) do
         bin.install "mimiry"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mimiry-com/mimiry-releases/releases/download/v1.0.2/mimiry_linux_arm64.tar.gz"
-      sha256 "124b901540268a5565db8296c427e8bb3cdb8993bf54f138b6c16cc6e7b04dd0"
-      def install
+      url "https://github.com/mimiry-com/mimiry-releases/releases/download/v1.1.0/mimiry_linux_arm64.tar.gz"
+      sha256 "3710cc59b754abcea5723a0266ca288afc7e76fb032ba2ebc459b61ef9ac1bc4"
+      define_method(:install) do
         bin.install "mimiry"
       end
     end
